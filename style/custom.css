@@ -1,0 +1,84 @@
+body {
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2e2a27;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(240, 230, 225, 0.76);
+}
+.rustic-furniture {
+    margin-bottom: 20px;
+}
+
+
+.col {
+    position: relative; /* Torna o elemento .col um container de posicionamento para seus filhos absolutos */
+   
+}
+
+.nav {
+    position: absolute; /* Define o posicionamento absoluto para o menu de navegação */
+    top: 10px; /* Posiciona o menu de navegação no topo */
+    left:70%; /* Posiciona o menu de navegação no canto esquerdo */
+    z-index: 0; /* Define a ordem de empilhamento do menu de navegação acima da imagem */
+}
+
+.nav .nav-link {
+    color: #1a1919; /* Define a cor do texto dos links como branca */
+}
+
+.imagem-principal {
+    position: absolute; /* Define o posicionamento absoluto para a imagem */
+    top: 0; /* Posiciona a imagem no topo */
+    left: 0; /* Posiciona a imagem no canto esquerdo */
+    z-index: 0; /* Define a ordem de empilhamento da imagem atrás do menu de navegação */
+    width: 100%;
+
+    }
+
+    .img-logo {
+        position: absolute; /* Define o posicionamento absoluto para o logo */
+        top: 50%; /* Posiciona o logo no meio verticalmente */
+        left: 50%; /* Posiciona o logo no meio horizontalmente */
+        transform: translate(-50%, -50%); /* Move o logo de volta metade da sua largura e altura */
+        z-index: 1; /* Garante que o logo esteja acima da imagem */
+        width: 800px; /* Define a largura do logotipo */
+        height: 700px; /* Define a altura do logotipo */
+    }
+    
+.card {
+
+    width: 32%;
+    float: left;
+    margin: 5px;
+    border: none;
+    
+}
+ .card-img-top {
+    
+    object-fit: cover;
+    width: 415px;
+    height: 500px;
+ }
+
+
+.container {
+
+    width: 80%;
+   
+}
+
+section {
+
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+   
+}
+
+input,
+textarea {
+
+    margin-bottom: 1rem;
+}
+
