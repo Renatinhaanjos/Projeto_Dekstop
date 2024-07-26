@@ -5,8 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style/custom.css">
-    <title>Dekstop_Projeto</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="./style/custom.css">
+<link rel="stylesheet" href="./style/custom-form.css">
+<title>Dekstop Projeto</title>
+
+<style>
+    .form-group-inline {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .form-group-inline .form-group {
+        flex: 0 0 48%;
+        margin-bottom: 1rem;
+    }
+</style>
 </head>
 
 <body>
@@ -23,22 +40,48 @@
                         <li class="nav-item"><a class="nav-link active" href="#quem_somos">Quem Somos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#atelie">Ateliê</a></li>
                         <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
                     </ul>
 
                 </div>
 
-                <div class="col">
-                    <img src="./bootstrap/imagem/img1.png" alt="imagem-principal">
+                <section id="carrossel-section" class="my-5">
+                    <div class="container">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./bootstrap/imagem/img1.png" class="d-block w-100" alt="Imagem 1" style="height: 700px; object-fit: cover;">
 
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./bootstrap/imagem/img7.jpg" class="d-block w-100" alt="Imagem 2" style="height: 700px; object-fit: cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./bootstrap/imagem/img8.jpg" class="d-block w-100" alt="Imagem 3" style="height: 700px; object-fit: cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
 
-
-
-
-                </div>
             </div>
         </div>
     </header>
+
+
 
     <section id="quem_somos">
         <div class="container">
@@ -172,32 +215,132 @@
         </div>
     </section>
 
-
-
-    <section id="contato">
+    <section id="cadastro">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h3><strong>Contato</strong></h3>
-                    <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação.</p>
+                    <h3><strong>Cadastro</strong></h3>
+                    <p>Faça seu cadastro para receber nossos produtos em sua casa</p>
                 </div>
-                <div class="col-md-6 col-sm-12">
-                    <form>
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" name="name" placeholder="Digite o seu nome">
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <form class="form">
+                        <div class="form-group-inline">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="name" placeholder="Digite o seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Digite o seu email" required>
+                            </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="email" name="email" placeholder="Digite o seu email">
+
+                        <div class="row mt-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="complemento" class="col-form-label col-form-label-sm">Endereço completo</label>
+                                <input type="text" id="endereco" class="form-control" placeholder="Endereço completo">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bairro" class="col-form-label col-form-label-sm">Telefone</label>
+                                <input type="text" id="telefone" class="form-control" placeholder="" required>
+                            </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Sua mensagem"></textarea>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6 col-sm-12">
+                                <label for="complemento" class="col-form-label col-form-label-sm">Complemento de endereço</label>
+                                <input type="text" id="complemento" class="form-control" placeholder="Complemento de endereço">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bairro" class="col-form-label col-form-label-sm">Bairro</label>
+                                <input type="text" id="bairro" class="form-control" placeholder="Bairro" required>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-lg btn-success">Solicitar Cotação</button>
+
+                        <div class="form-row">
+                            <div class="col-md-4 col-sm-12 mb-3">
+                                <label for="cidade" class="col-form-label col-form-label-sm">Cidade</label>
+                                <input type="text" name="cidade" id="cidade" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 col-sm-12 mb-3">
+                                <label for="estado" class="col-form-label col-form-label-sm">Estado</label>
+                                <select name="estado" id="estado" class="form-control" required>
+                                    <option value="">Selecione um estado</option>
+                                    <option value="al">AL</option>
+                                    <option value="ap">AP</option>
+                                    <option value="ba">BA</option>
+                                    <option value="df">DF</option>
+                                    <option value="pa">PA</option>
+                                    <option value="pb">PB</option>
+                                    <option value="rj">RJ</option>  
+                                    <option value="rs">RS</option>
+                                    <option value="sc">SC</option>
+                                    <option value="sp">SP</option>
+                                    <option value="se">SE</option>
+                                    <option value="to">TO</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 mb-3">
+                                <label for="cep" class="col-form-label col-form-label-sm">CEP</label>
+                                <input type="text" name="cep" id="cep" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="info" class="col-form-label col-form-label-sm">Informações</label>
+                            <textarea class="form-control" name="informacoes" id="info" rows="5" placeholder="Sua mensagem"></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" name="promocionais" id="promocionais" class="form-check-input">
+                            <label for="promocionais" class="form-check-label">Aceito receber mensagens promocionais</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-success mt-3">Realizar cadastro</button>
                     </form>
+                    <p>
+                        <a href="#Cadastra-se" data-bs-toggle="modal" data-bs-target="#modal-4">Cadastra-se</a> para receber novidades.
+                    </p>
+
+
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="#cadastro" tabindex="-1" aria-labelledby="modal-4-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-4-label"><b>Inscrever-me na lista</b></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6><b>Preencha os campos para receber novidades e promoções</b></h6>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label"></label>
+                            <input type="text" class="form-control" id="nome" placeholder="nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"></label>
+                            <input type="email" class="form-control" id="email" placeholder="e-mail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Receber novidades</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- Modal 1 -->
     <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-1-label" aria-hidden="true">
@@ -338,6 +481,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
